@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#CCE9F8FF"
+    android:layout_marginBottom="30dp"
+    android:padding="20dp"
+    tools:context=".ui.dashboard.MainActivity3">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="NOMBRE"
+        android:id="@+id/nombre"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="DOMICILIO"
+        android:id="@+id/domicilio"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="LICENCIA DE CONDUCIR"
+        android:id="@+id/licencia"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="MODELO"
+        android:id="@+id/modelo"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="MARCA"
+        android:id="@+id/marca"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="FECHA"
+        android:id="@+id/fecha"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ACTUALIZAR"
+        android:layout_marginTop="10dp"
+        android:id="@+id/actualizar"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="REGRESAR"
+        android:layout_marginTop="10dp"
+        android:id="@+id/regresar"/>
+</LinearLayout>

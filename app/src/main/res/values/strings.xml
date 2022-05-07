@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">LADM_U3_PRACTICA2_BaseDatosFirestore_AXEL_LOPEZ_RENTERIA</string>
+    <string name="title_auto">AUTOMOVIL</string>
+    <string name="title_arrendamiento">ARRENDAMIENTO</string>
+    <string name="title_empresa">Empresa</string>
+</resources>

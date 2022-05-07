@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "799192028724",
+    "project_id": "ladmu3pract2axellopezrenteria",
+    "storage_bucket": "ladmu3pract2axellopezrenteria.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799192028724:android:7b1d5f0169132b63d91c61",
+        "android_client_info": {
+          "package_name": "mx.tecnm.tepic.ladm_u3_practica2_basedatosfirestore_axel_lopez_renteria"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799192028724-j2hjgoncrt9ddiqk58fepj4djpk7qp4f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnExjooebuUxlsQFjCLS-yXnuzWMtIMwE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "799192028724-j2hjgoncrt9ddiqk58fepj4djpk7qp4f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

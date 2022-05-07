@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCE9F8FF"
+    tools:context=".ui.notifications.NotificationsFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alamo"
+        android:layout_gravity="center_horizontal"
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ARRENDAMIENTO DE AUTOS"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20dp"
+        android:layout_marginTop="70dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Te asesoramos en el esquema de arrendamiento ideal para resolver tus necesidades de movilidad"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="110dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:layout_gravity="bottom|center"
+        android:text="(C) Derechos Reservados Alamo"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_gravity="center_horizontal"
+        android:text="55 4742 3198"
+        android:textSize="20dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+        android:layout_gravity="center_horizontal"
+        android:text="ASOCIADO AXEL LÓPEZ RENTERÍA"
+        android:textSize="20dp" />
+    <ImageView
+        android:layout_width="445dp"
+        android:layout_height="205dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="300dp"
+        android:src="@drawable/arrendamientoimage" />
+</FrameLayout>
