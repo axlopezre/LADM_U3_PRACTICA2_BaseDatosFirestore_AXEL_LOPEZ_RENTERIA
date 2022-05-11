@@ -65,12 +65,17 @@ class DashboardFragment : Fragment() {
                     arreglo.add(cadena)
                     listaID.add(documento.id.toString())//obtener el id de cada documento
                 }
-                binding.lista.adapter = ArrayAdapter<String>(
-                    requireContext(),
-                    R.layout.simple_list_item_1, arreglo
-                )
-                binding.lista.setOnItemClickListener { adapterView, view, posicion, l ->
-                    dialogoEliminaActualiza(posicion)
+
+                try {
+                    binding.lista.adapter = ArrayAdapter<String>(
+                        requireContext(),
+                        R.layout.simple_list_item_1, arreglo
+                    )
+                    binding.lista.setOnItemClickListener { adapterView, view, posicion, l ->
+                        dialogoEliminaActualiza(posicion)
+                    }
+                }catch (err: NullPointerException){
+
                 }
             }
 
@@ -121,17 +126,17 @@ class DashboardFragment : Fragment() {
             }else if(!binding.domicilio.text.toString().equals("")) {
                 consulta = baseRemota.collection("ARRENDAMIENTO").whereEqualTo("DOMICILIO", binding.domicilio.text.toString())
             }else if(!binding.licencia.text.toString().equals("")) {
-                consulta = baseRemota.collection("ARRENDAMIENTO").whereGreaterThanOrEqualTo("LICENCIACOND", binding.licencia.text.toString())
+                consulta = baseRemota.collection("ARRENDAMIENTO").whereEqualTo("LICENCIACOND", binding.licencia.text.toString())
             }else if(!binding.modelo.text.toString().equals("")) {
-                consulta = baseRemota.collection("ARRENDAMIENTO").whereGreaterThanOrEqualTo("MODELO", binding.modelo.text.toString())
+                consulta = baseRemota.collection("ARRENDAMIENTO").whereEqualTo("MODELO", binding.modelo.text.toString())
             }else if(!binding.marca.text.toString().equals("")) {
-                consulta = baseRemota.collection("ARRENDAMIENTO").whereGreaterThanOrEqualTo("MARCA", binding.marca.text.toString())
+                consulta = baseRemota.collection("ARRENDAMIENTO").whereEqualTo("MARCA", binding.marca.text.toString())
             }
             consulta.get()
                 .addOnSuccessListener {
                     for (documento in it) {
                         text += "\nNOMBRE: ${documento.getString("NOMBRE")} \nDOMICILIO: ${documento.getString("DOMICILIO")} \nLICENCIA: ${
-                            documento.getString("LICENCIACOND")}\nMODELO: ${documento.getString("MODELO")}\nMARCA: ${documento.getString("MARCA")}"
+                            documento.getString("LICENCIACOND")}\nMODELO: ${documento.getString("MODELO")}\nMARCA: ${documento.getString("MARCA")}\n--------"
                     }
                     if(text == ""){
                         AlertDialog.Builder(requireContext())
@@ -139,6 +144,11 @@ class DashboardFragment : Fragment() {
                             .setMessage("No existen los datos que buscas")
                             .setNeutralButton("CERRAR"){d,i->}
                             .show()
+                        binding.nombre.setText("")
+                        binding.domicilio.setText("")
+                        binding.licencia.setText("")
+                        binding.modelo.setText("")
+                        binding.marca.setText("")
                         return@addOnSuccessListener
                     }
                     AlertDialog.Builder(requireContext())
@@ -146,6 +156,11 @@ class DashboardFragment : Fragment() {
                         .setMessage(text)
                         .setNeutralButton("CERRAR"){d,i->}
                         .show()
+                    binding.nombre.setText("")
+                    binding.domicilio.setText("")
+                    binding.licencia.setText("")
+                    binding.modelo.setText("")
+                    binding.marca.setText("")
                 }
                 .addOnFailureListener {
                     AlertDialog.Builder(requireContext())

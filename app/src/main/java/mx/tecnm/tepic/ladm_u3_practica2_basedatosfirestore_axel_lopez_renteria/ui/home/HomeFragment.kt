@@ -117,7 +117,7 @@ class HomeFragment : Fragment() {
                 .addOnSuccessListener {
                     for (documento in it) {
                          text += "MODELO: ${documento.getString("MODELO")} \nMARCA: ${documento.getString("MARCA")} \nKILOMETRAGE: ${
-                                documento.getLong("KILOMETRAGE")}"
+                                documento.getLong("KILOMETRAGE")}\n\n"
                     }
                     if(text == ""){
                         AlertDialog.Builder(requireContext())
